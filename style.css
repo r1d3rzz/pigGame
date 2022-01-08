@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto Mono", monospace;
+}
+body {
+  background: linear-gradient(to bottom right, #66ff66 -4%, #0066cc 100%);
+  height: 100vh;
+}
+#main {
+  position: relative;
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  top: 10vh;
+}
+
+/* Player Section  */
+.player {
+  width: 500px;
+  height: 600px;
+  display: flex;
+  justify-content: start;
+  flex-direction: column;
+  user-select: none;
+  align-items: center;
+}
+
+.player--0 {
+  background-color: white;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  opacity: 0.2;
+  backdrop-filter: blur(20%);
+}
+.player--1 {
+  background-color: white;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  opacity: 0.2;
+  backdrop-filter: blur(20%);
+}
+
+.active--player {
+  background-color: rgba(192, 133, 231, 0.876);
+  opacity: 0.8;
+}
+
+.player--name {
+  position: absolute;
+  top: 2rem;
+  font-size: 40px;
+  color: black;
+}
+
+.score {
+  font-size: 70px;
+  position: absolute;
+  top: 6rem;
+}
+
+.current {
+  position: absolute;
+  bottom: 2rem;
+  background-color: brown;
+  width: 250px;
+  height: 130px;
+  border-radius: 5px;
+}
+
+.current p {
+  font-size: 23px;
+  color: white;
+  padding: 6px 2px;
+  text-align: center;
+}
+
+.current span {
+  font-size: 50px;
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+
+.winner {
+  font-size: 50px;
+  position: absolute;
+  top: 15rem;
+  color: white;
+}
+
+.hidden {
+  display: none;
+}
+
+.player--winner {
+  background-color: rgb(228, 105, 68);
+  color: white;
+  opacity: 1;
+}
+/* dice */
+
+#dice--image {
+  position: absolute;
+  top: 10rem;
+}
+
+/* Button Group */
+.btn {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  font-size: 25px;
+  padding: 5px 20px;
+  background-color: white;
+  border-radius: 20px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background-color: rgba(61, 180, 235, 0.657);
+  transition: all 0.2s;
+  box-shadow: 0 1.75rem 3.5rem rgba(0, 0, 0, 0.1);
+}
+
+.btn:active {
+  transform: translate(-50%, 30px);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+}
+
+#restartBtn {
+  top: 1rem;
+}
+
+#rollBtn {
+  top: 22rem;
+}
+
+#holdBtn {
+  top: 29rem;
+}
